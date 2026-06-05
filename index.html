@@ -24,9 +24,9 @@
 <script>
     const map = new maplibregl.Map({
         container: 'map',
-        style: 'https://tiles.openfreemap.org/styles/bright',
+        style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
         center: [-122.1701, 37.42806],
-        zoom: 15.00
+        zoom: 12.00
     });
 
     map.on('load', () => {
@@ -51,7 +51,7 @@
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Annenberg Auditorium</strong><p>Discover IDA events that took place at this location. <a href="https://sites.google.com/stanford.edu/ida-cbpa-archives/our-materials?authuser=1#h.3m7c0dwyyzqk" target="_blank" title="Opens in a new window">See our records</a>! Enjoy!</p>',
+                                '<strong>Annenberg Auditorium</strong><p>Discover IDA events that took place at this location. <a href="https://sites.google.com/stanford.edu/ida-cbpa-archives/search-by-venue?authuser=1#h.m7diaju79f1i" target="_blank" title="Opens in a new window">See our records</a>! Enjoy!</p>',
                             'icon': 'theatre'
                         },
                         'geometry': {
