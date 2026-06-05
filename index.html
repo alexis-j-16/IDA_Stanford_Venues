@@ -29,7 +29,11 @@
         zoom: 11.15
     });
 
-    map.on('load', () => {
+    map.on('load', async () => {
+        const image = await map.loadImage('https://maplibre.org/maplibre-gl-js/docs/assets/custom_marker.png');
+        // Add an image to use as a custom marker
+        map.addImage('custom-marker', image.data);
+        
         map.addSource('places', {
             'type': 'geojson',
             'data': {
@@ -152,7 +156,7 @@
             'type': 'symbol',
             'source': 'places',
             'layout': {
-                'icon-image': '{icon}',
+                'icon-image': 'custom-marker',
                 'icon-overlap': 'always'
             }
         });
